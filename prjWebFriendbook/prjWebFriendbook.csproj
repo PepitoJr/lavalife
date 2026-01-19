@@ -1,0 +1,226 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBF9E7BC-143A-48FC-AF98-C55E36634B47}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>prjWebFriendbook</RootNamespace>
+    <AssemblyName>prjWebFriendbook</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccueilFriendbook.aspx" />
+    <Content Include="App_Data\FriendbookDB.mdf" />
+    <Content Include="App_Data\FriendbookDB_log.ldf">
+      <DependentUpon>FriendbookDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="DeleteMsg.aspx" />
+    <Content Include="DetailsUser.aspx" />
+    <Content Include="EcrireMessage.aspx" />
+    <Content Include="HeroPageFriendBook.aspx" />
+    <Content Include="LireMessage.aspx" />
+    <Content Include="ListeMessage.aspx" />
+    <Content Include="mesimages\imgLogo.png" />
+    <Content Include="InscriptionFriendbook.aspx" />
+    <Content Include="LoginFriendbook.aspx" />
+    <Content Include="mesimages\bgDelaFemmeGauche.jpg" />
+    <Content Include="mesimages\lavalifelogo.png" />
+    <Content Include="mesimages\ll_logo.png" />
+    <Content Include="mesimages\ll_logo_gray_march2015.png" />
+    <Content Include="mesimages\LL_right_bg.jpg" />
+    <Content Include="mesimages\LL_right_text_header %281%29.png" />
+    <Content Include="mesimages\LL_right_text_header.png" />
+    <Content Include="mesimages\LL_seperator.png" />
+    <Content Include="mesimages\ll_welcome_app_bg.jpg" />
+    <Content Include="mesimages\ll_welcome_design_img.png" />
+    <Content Include="mesimages\ll_welcome_ic_design.png" />
+    <Content Include="mesimages\ll_welcome_ic_interest.png" />
+    <Content Include="mesimages\ll_welcome_ic_profile.png" />
+    <Content Include="mesimages\ll_welcome_Interest_img.png" />
+    <Content Include="mesimages\ll_welcome_profile_img.png" />
+    <Content Include="mesimages\logoappstore.png" />
+    <Content Include="mesimages\logogoogleplay.png" />
+    <Content Include="ReponseAuMsg.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccueilFriendbook.aspx.cs">
+      <DependentUpon>AccueilFriendbook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccueilFriendbook.aspx.designer.cs">
+      <DependentUpon>AccueilFriendbook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteMsg.aspx.cs">
+      <DependentUpon>DeleteMsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteMsg.aspx.designer.cs">
+      <DependentUpon>DeleteMsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsUser.aspx.cs">
+      <DependentUpon>DetailsUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailsUser.aspx.designer.cs">
+      <DependentUpon>DetailsUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EcrireMessage.aspx.cs">
+      <DependentUpon>EcrireMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EcrireMessage.aspx.designer.cs">
+      <DependentUpon>EcrireMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HeroPageFriendBook.aspx.cs">
+      <DependentUpon>HeroPageFriendBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HeroPageFriendBook.aspx.designer.cs">
+      <DependentUpon>HeroPageFriendBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InscriptionFriendbook.aspx.cs">
+      <DependentUpon>InscriptionFriendbook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InscriptionFriendbook.aspx.designer.cs">
+      <DependentUpon>InscriptionFriendbook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LireMessage.aspx.cs">
+      <DependentUpon>LireMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LireMessage.aspx.designer.cs">
+      <DependentUpon>LireMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListeMessage.aspx.cs">
+      <DependentUpon>ListeMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListeMessage.aspx.designer.cs">
+      <DependentUpon>ListeMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginFriendbook.aspx.cs">
+      <DependentUpon>LoginFriendbook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginFriendbook.aspx.designer.cs">
+      <DependentUpon>LoginFriendbook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReponseAuMsg.aspx.cs">
+      <DependentUpon>ReponseAuMsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReponseAuMsg.aspx.designer.cs">
+      <DependentUpon>ReponseAuMsg.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mesimages\loginImage.webp" />
+    <Content Include="mesimages\logo.webp" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11530</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:11530/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
