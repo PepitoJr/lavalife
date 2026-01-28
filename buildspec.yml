@@ -1,29 +1,24 @@
 ﻿version: 0.2
 
 phases:
-    install:
-        runtime-version:
-            dotnet: 8.0
-        commands:
-            - echo "installation de .NET terminee"
-    pre-build:
-        commands:
-            - echo "Restauration des dependances"
-            - dotnet restore
-    build:
-        commands:
-            - echo "Compilation du projet"
-            - dotnet build prjWebFriendbook.sln -c --n-restore
-            - echo "publication"
-            - dotnet publish prjWebFriendbook.sln -c Release -o output
-    post-build:
-        commands:
-            - echo "Publication du projet"
-            - dotnet publish -c Release -o output
-
+  install:
+    commands:
+      - echo "Restauration NuGet"
+      - nuget restore prjWebFriendbook.sln/prjwebFriendbook.csproj
+  pre-build:
+    commands:
+      - echo "Restauration des dependances"
+      - dotnet restore
+  build:
+    commands:
+      - echo "build du projet webforms"
+      - nuget restore prjWebFriendbook.sln/prjwebFriendbook.csproj /p:Configuration=Release
+  post-build:
+    commands:
+      - echo "Publication du projet"
+      - dotnet publish -c Release -o output
 
 artifacts:
-    files:
-        - '**/*'
-    base-directory: output
-    
+  files:
+    - "**/*"
+  base-directory: output
