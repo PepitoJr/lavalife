@@ -3,22 +3,20 @@
 phases:
   install:
     commands:
-      - echo "Restauration NuGet"
-      - nuget restore prjWebFriendbook.sln/prjwebFriendbook.csproj
+      - echo "Environnement windows pret"
   pre-build:
     commands:
-      - echo "Restauration des dependances"
-      - dotnet restore
+      - echo "Restauration Nuget"
+      - nuget restore prjWebFriendbook.sln
   build:
     commands:
-      - echo "build du projet webforms"
-      - nuget restore prjWebFriendbook.sln/prjwebFriendbook.csproj /p:Configuration=Release
+      - echo "compilation du projet webforms"
+      - msbuild  prjWebFriendbook.sln /p:Configuration=Release
+
   post-build:
     commands:
-      - echo "Publication du projet"
-      - dotnet publish -c Release -o output
+      - echo "build termine"
 
 artifacts:
   files:
     - "**/*"
-  base-directory: output
