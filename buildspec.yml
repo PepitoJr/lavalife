@@ -4,10 +4,12 @@ phases:
   install:
     commands:
       - echo "Environnement windows pret"
+
   pre-build:
     commands:
       - echo "Restauration Nuget"
       - nuget restore prjWebFriendbook.sln
+
   build:
     commands:
       - echo "compilation du projet webforms"
