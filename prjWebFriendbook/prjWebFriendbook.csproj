@@ -177,6 +177,8 @@
   <ItemGroup>
     <Content Include="mesimages\loginImage.webp" />
     <Content Include="mesimages\logo.webp" />
+    <None Include=".editorconfig" />
+    <Content Include="buildspec.yml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
